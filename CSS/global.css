@@ -28,4 +28,13 @@ a {
   padding: 10px 30px;
   background-color: #ff5702;
   color: rgb(77, 40, 0);
+  border-radius: 5px;
+}
+
+.btn:hover {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #ff8f57;
+  color: rgb(77, 40, 0);
+  border-radius: 5px;
 }
