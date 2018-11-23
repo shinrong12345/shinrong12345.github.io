@@ -43,6 +43,31 @@
                 }
 
             });
+
+             $("nav").find("a").click(function(){
+                let target = $(this).data("target");
+                let topOffset = $(target).offset().top;
+                console.log(topOffset);
+                $("html,body").animate({
+                    scrollTop: topOffset
+                })
+            })
+            $("#gotop").click(function(){
+                $("html,body").animate({
+                    scrollTop: 0
+                })
+                return false;
+            })
+
+            $(window).scroll(function(){
+                let h = $("html,body").scrollTop();
+                console.log(h);
+                if(h>300){
+                    $("#gotop").fadeIn();
+                }else{
+                    $("#gotop").fadeOut();
+                }
+            });
         })
     </script>
 
@@ -106,6 +131,11 @@
             </div>
         </div>
     </nav>
+   
+
+    <a href="javascript:;" id="gotop">TOP</a>
+
+
 <header class="full-width">
     <h1>Tittle</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rem.</p>
